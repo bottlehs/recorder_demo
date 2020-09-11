@@ -25,7 +25,7 @@ function createAudioContext(desiredSampleRate) {
 	context = new AudioContext({ sampleRate: desiredSampleRate });
 	}
 	return context;
-},
+};
 
 //webkitURL is deprecated but nevertheless
 URL = window.URL || window.webkitURL;
