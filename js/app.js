@@ -55,7 +55,9 @@ function startRecording() {
 
 		*/
       audioContext = new AudioContext({ sampleRate: 16000 });
-      audioCtx.createBuffer(2, audioContext.sampleRate, 16000);
+      alert(audioContext.sampleRate);
+      audioContext.createBuffer(2, audioContext.sampleRate, 16000);
+      alert(audioContext.sampleRate);
 
       //update the format
       document.getElementById("formats").innerHTML =
