@@ -35,7 +35,7 @@ var rec; //Recorder.js object
 var input; //MediaStreamAudioSourceNode we'll be recording
 
 // shim for AudioContext when it's not avb.
-var AudioContext = createAudioContext(16000);
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioContext; //audio context to help us record
 
 var recordButton = document.getElementById("recordButton");
@@ -83,7 +83,7 @@ function startRecording() {
 			the sampleRate defaults to the one set in your OS for your playback device
 
 		*/
-      audioContext = new AudioContext({ sampleRate: 16000 });
+      audioContext = createAudioContext(16000);
 
       //update the format
       document.getElementById("formats").innerHTML =
