@@ -51,7 +51,7 @@ function startRecording() {
 
 		*/
 		var audioContext //audio context to help us record
-		
+		alert('hello');
 		if ( audioContext ) {
 			alert('audioContext ok');
 		} else {
